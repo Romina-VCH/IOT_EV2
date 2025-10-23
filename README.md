@@ -1,8 +1,7 @@
-# Green EV - App de Login y Registro
+# Green
 
 ## Descripción
 Aplicación Android que muestra un Splash Screen, Login, Registro de cuenta y recuperación de contraseña.
-Proyecto de práctica para aprender diseño y navegación en Android.
 
 ## Instalación
 1. Clonar o descargar el repositorio.
@@ -15,6 +14,12 @@ Proyecto de práctica para aprender diseño y navegación en Android.
 - Registro de cuenta con alerta de éxito.
 - Recuperación de contraseña con alerta de éxito.
 - Navegación entre pantallas mediante Intents.
+  Seguridad y permisos
+  
+## Seguridad y permisos
+-La aplicación no solicita permisos sensibles (como ubicación, contactos, cámara, micrófono).
+-Todas las interacciones se manejan localmente sin exponer datos a servidores externos.
+-Cumple con buenas prácticas de seguridad y privacidad, alineadas con estándares ISO de desarrollo seguro.
 
 ## Notas
 - El bonus de Bluetooth no fue implementado.
