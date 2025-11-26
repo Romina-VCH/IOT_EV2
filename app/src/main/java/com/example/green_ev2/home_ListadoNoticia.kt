@@ -1,12 +1,12 @@
 package com.example.green_ev2
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class home_ListadoNoticia : AppCompatActivity() {
@@ -15,7 +15,6 @@ class home_ListadoNoticia : AppCompatActivity() {
     private val listaNoticias = mutableListOf<Noticia>()
     private val db = FirebaseFirestore.getInstance()
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_listado_noticia)
@@ -23,14 +22,27 @@ class home_ListadoNoticia : AppCompatActivity() {
         recycler = findViewById(R.id.recyclerNoticias)
         recycler.layoutManager = LinearLayoutManager(this)
 
+        // Botón Agregar Noticia
         val btnAgregar = findViewById<Button>(R.id.btnAgregarNoticia)
         btnAgregar.setOnClickListener {
             val intent = Intent(this, AgregarNoticiaActivity::class.java)
             startActivity(intent)
         }
 
+        // Botón Actualizar
+        val btnActualizar = findViewById<Button>(R.id.btnActualizar)
+        btnActualizar.setOnClickListener {
+            cargarNoticias()
+        }
 
-
+        // Botón Cerrar sesión
+        val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
+        btnCerrarSesion.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
 
         cargarNoticias()
     }

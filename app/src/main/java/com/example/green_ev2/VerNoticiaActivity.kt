@@ -2,7 +2,6 @@ package com.example.green_ev2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 
 class VerNoticiaActivity : AppCompatActivity() {
@@ -16,15 +15,6 @@ class VerNoticiaActivity : AppCompatActivity() {
         val autor = findViewById<TextView>(R.id.txtAutor)
         val fecha = findViewById<TextView>(R.id.txtFecha)
 
-        val btnVolver = findViewById<Button>(R.id.btnVolver)
-        btnVolver.setOnClickListener {
-            finish()
-        }
-
-
-
-
-
         // Leer los extras que enviamos
         titulo.text = intent.getStringExtra("titulo")
         contenido.text = intent.getStringExtra("contenido")
@@ -32,5 +22,3 @@ class VerNoticiaActivity : AppCompatActivity() {
         fecha.text = intent.getStringExtra("fecha")
     }
 }
-
-

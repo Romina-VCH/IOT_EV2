@@ -48,6 +48,9 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-firestore-ktx")
 
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -62,3 +65,4 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+private fun DependencyHandlerScope.kapt(string: String) {}

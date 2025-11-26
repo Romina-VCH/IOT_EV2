@@ -13,6 +13,23 @@
         android:orientation="vertical"
         android:background="@drawable/fondo_app">
 
+        <ImageView
+            android:id="@+id/imagen_tipoLogo2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/osito" />
+
+        <TextView
+            android:id="@+id/texto_crear2"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/adlam_display"
+            android:text="Agregar Noticia"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="50dp">
+                android:padding="30dp">
 
                 <EditText
                     android:id="@+id/txtTitulo"
@@ -55,6 +72,14 @@
                     android:hint="Autor" />
 
                 <EditText
+                    android:id="@+id/txtImagenUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="URL de la Imagen"
+                    android:inputType="textUri" />
+
+                <EditText
                     android:id="@+id/txtFecha"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -64,8 +89,8 @@
                 <Button
                     android:id="@+id/btnGuardar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
                     android:text="Guardar Noticia"
                     android:backgroundTint="@color/color2"/>
 

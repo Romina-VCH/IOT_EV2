@@ -18,11 +18,10 @@ class AgregarNoticiaActivity : AppCompatActivity() {
         val titulo = findViewById<EditText>(R.id.txtTitulo)
         val resumen = findViewById<EditText>(R.id.txtResumen)
         val contenido = findViewById<EditText>(R.id.txtContenido)
+        // <-- AÑADIR: Vincula el nuevo EditText para la URL de la imagen
+        val imagenUrl = findViewById<EditText>(R.id.txtImagenUrl)
         val autor = findViewById<EditText>(R.id.txtAutor)
         val fecha = findViewById<EditText>(R.id.txtFecha)
-
-
-
 
         val botonGuardar = findViewById<Button>(R.id.btnGuardar)
 
@@ -32,19 +31,24 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                 "titulo" to titulo.text.toString(),
                 "resumen" to resumen.text.toString(),
                 "contenido" to contenido.text.toString(),
+                "imagenUrl" to imagenUrl.text.toString(),
                 "autor" to autor.text.toString(),
                 "fecha" to fecha.text.toString()
             )
 
-            db.collection("noticias")
-                .add(data)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Noticia guardada", Toast.LENGTH_SHORT).show()
-                    finish() // vuelve atrás
-                }
-                .addOnFailureListener {
-                    Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
-                }
+            if (titulo.text.isNotBlank() && resumen.text.isNotBlank() && contenido.text.isNotBlank() && imagenUrl.text.isNotBlank() && autor.text.isNotBlank()) {
+                db.collection("noticias")
+                    .add(data)
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Noticia guardada", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
+                    }
+            } else {
+                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+            }
         }
 
         val btnVolver = findViewById<Button>(R.id.btnVolver)

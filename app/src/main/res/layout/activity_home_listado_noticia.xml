@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home_ListadoNoticia"
-    android:background="@drawable/fondo_app">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="40dp"
-        android:padding="40dp"
-        android:background="@color/white">
-
-        <Button
-            android:id="@+id/btnVolver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Volver"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/verde_oscuro"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerNoticias"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/btnVolver"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btnAgregarNoticia"/>
-
-        <Button
-            android:id="@+id/btnAgregarNoticia"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Agregar Noticia"
-            android:layout_margin="16dp"
-            android:backgroundTint="@color/verde_oscuro"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/fondo_app"
+    tools:context=".home_ListadoNoticia">
 
 
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:backgroundTint="@color/verde_oscuro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNoticias"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCerrarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnAgregarNoticia"
+        android:padding="8dp"/>
+
+
+    <Button
+        android:id="@+id/btnAgregarNoticia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Agregar Noticia"
+        android:backgroundTint="@color/verde_oscuro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnActualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"/>
+
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:backgroundTint="@color/verde_oscuro"
+        app:layout_constraintStart_toEndOf="@id/btnAgregarNoticia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
