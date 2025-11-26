@@ -21,6 +21,9 @@ class AgregarNoticiaActivity : AppCompatActivity() {
         val autor = findViewById<EditText>(R.id.txtAutor)
         val fecha = findViewById<EditText>(R.id.txtFecha)
 
+
+
+
         val botonGuardar = findViewById<Button>(R.id.btnGuardar)
 
         botonGuardar.setOnClickListener {
@@ -42,6 +45,11 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                 .addOnFailureListener {
                     Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
                 }
+        }
+
+        val btnVolver = findViewById<Button>(R.id.btnVolver)
+        btnVolver.setOnClickListener {
+            finish()
         }
     }
 }

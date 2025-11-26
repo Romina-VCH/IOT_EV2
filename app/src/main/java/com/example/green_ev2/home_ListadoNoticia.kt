@@ -1,5 +1,6 @@
 package com.example.green_ev2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -14,6 +15,7 @@ class home_ListadoNoticia : AppCompatActivity() {
     private val listaNoticias = mutableListOf<Noticia>()
     private val db = FirebaseFirestore.getInstance()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_listado_noticia)
@@ -26,6 +28,9 @@ class home_ListadoNoticia : AppCompatActivity() {
             val intent = Intent(this, AgregarNoticiaActivity::class.java)
             startActivity(intent)
         }
+
+
+
 
         cargarNoticias()
     }
