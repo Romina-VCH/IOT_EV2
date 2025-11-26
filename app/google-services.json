@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "48048744780",
+    "project_id": "greeniot-c61e5",
+    "storage_bucket": "greeniot-c61e5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48048744780:android:a156b141593b6667f4c7e9",
+        "android_client_info": {
+          "package_name": "com.example.green_ev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48048744780-oa1ak4c7cgjld2s8tg3tjnej2a9ls5a2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.green_ev2",
+            "certificate_hash": "0c80f1c3a51e17d637868e5110b85b05551b0e24"
+          }
+        },
+        {
+          "client_id": "48048744780-b5sl3tu391r9kk7lttnb2s5108vf8oe6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2orF07k2ktJM-Yk3F6kr0agnHdaNEHuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48048744780-b5sl3tu391r9kk7lttnb2s5108vf8oe6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

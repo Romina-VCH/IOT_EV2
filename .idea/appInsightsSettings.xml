@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.green_ev2" />
+                  <option name="mobileSdkAppId" value="1:48048744780:android:a156b141593b6667f4c7e9" />
+                  <option name="projectId" value="greeniot-c61e5" />
+                  <option name="projectNumber" value="48048744780" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -22,16 +22,24 @@
                 <category android:name="android.intent.category.LAUNCHER" /> <!-- aparecerá en el launcher del teléfono -->
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".crear_cuenta"
             android:exported="false" />
         <activity
             android:name=".recuperar_Cuenta"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarNoticiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home_ListadoNoticia"
+            android:exported="false" />
+
+        <activity
+            android:name=".VerNoticiaActivity"
             android:exported="false" />
 
         <meta-data
